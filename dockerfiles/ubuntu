@@ -1,7 +1,7 @@
 FROM i386/ubuntu:18.04
 RUN echo hello
 RUN apt update
-RUN apt install curl -y
+RUN apt install curl systemd systemd-sysv htop screenfetch bash node -y
 RUN curl neofetch.sh --output /bin/neofetch
 RUN chmod +x /bin/neofetch
 RUN mkdir /home/user
