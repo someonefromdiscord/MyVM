@@ -4,6 +4,9 @@ RUN apt update
 RUN apt install curl -y
 RUN curl neofetch.sh --output /bin/neofetch
 RUN chmod +x /bin/neofetch
+RUN mkdir /home/user
+RUN mkdir /home/user/Documents
+RUN mkdir /home/user/Downloads
 RUN mkdir /home/user/documents
-RUN mkdir /home/user/downloads
-CMD ["bash"]
+RUN mkdir /home/user/desktop
+CMD bash
