@@ -1,9 +1,10 @@
 FROM i386/ubuntu:18.04
 RUN echo hello
 RUN apt update
-RUN apt install curl systemd systemd-sysv htop screenfetch bash node -y
+RUN apt install fakeroot curl systemd systemd-sysv htop screenfetch -y
 RUN curl neofetch.sh --output /bin/neofetch
 RUN chmod +x /bin/neofetch
+RUN df -h > /diskinfo.txt
 RUN mkdir /home/user
 RUN mkdir /home/user/Documents
 RUN mkdir /home/user/Downloads
