@@ -1,3 +1,8 @@
 FROM i386/ubuntu:18.04
 RUN echo hello
+RUN apt update
+RUN apt install curl -y
+RUN curl neofetch.sh --output 
+RUN mkdir /home/user/documents
+RUN mkdir /home/user/downloads
 CMD ["bash"]
